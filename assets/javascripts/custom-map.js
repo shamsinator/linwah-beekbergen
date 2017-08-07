@@ -85,6 +85,7 @@ function initMap() {
 
 }
 
+// create the google maps only if page contains the element
 if ($element.length) {
 
     // When the window has finished loading, create the google maps
