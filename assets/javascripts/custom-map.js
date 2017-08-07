@@ -1,5 +1,9 @@
-// create global map variable
+// get the element to animate
+var $element = $('#map-canvas');
+
+// create global map variables
 var map;
+var marker;
 
 // Main init function
 function initMap() {
@@ -81,8 +85,12 @@ function initMap() {
 
 }
 
-// When the window has finished loading, create the google maps
-google.maps.event.addDomListener(window, 'load', initMap);
+if ($element.length) {
+
+    // When the window has finished loading, create the google maps
+    google.maps.event.addDomListener(window, 'load', initMap);
+
+}
 
 // On window resize make sure to always center the location
 google.maps.event.addDomListener(window, 'resize', function() {

@@ -1,0 +1,142 @@
+[1mdiff --git a/impressies.html b/impressies.html[m
+[1mindex b762f0e..acfd20f 100644[m
+[1m--- a/impressies.html[m
+[1m+++ b/impressies.html[m
+[36m@@ -10,7 +10,7 @@[m
+     <meta name="keywords" content="chinees restaurant Beekbergen" />[m
+     <meta name="Robots" content="index, follow" /> [m
+     <meta name="Language" content="Nederlands" /> [m
+[31m-    <meta name="description" content="Chinees Indisch restaurant LinWah is gevestigd in Beekbergen. In ons restaurant kunt u heerlijk lunchen of dineren in een oosterse ambiance. Reserveer nu of kom langs." />[m
+[32m+[m[32m    <meta name="description" content="Heerlijk genieten van ons uitgebreid menu? Kom naar Chinees restaurant Lin Wah in Beekbergen. Afhalen? Bel 055-5061818." />[m
+     <!-- <link rel=”author” href=”https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]”/>   -->[m
+     <!-- <a href=”https://plus.google.com/[YOUR PERSONAL G+ PROFILE NUMBER]” rel=”me”>Me on Google+</a> -->[m
+     <!-- <link rel=”publisher” href=”https://plus.google.com/[YOUR BUSINESS G+ PROFILE HERE]”/> -->[m
+[36m@@ -47,7 +47,7 @@[m
+     <!-- Font style -->[m
+     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,300,700italic' rel='stylesheet' type='text/css'>[m
+     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,400italic' rel='stylesheet' type='text/css'>[m
+[31m-    <link href='https://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>[m
+[32m+[m[32m    <link href='https://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>[m[41m [m
+   </head>[m
+ [m
+   <body>[m
+[1mdiff --git a/menu.html b/menu.html[m
+[1mindex d9aac7b..ac88f38 100644[m
+[1m--- a/menu.html[m
+[1m+++ b/menu.html[m
+[36m@@ -86,15 +86,6 @@[m
+           <ul class="nav navbar-nav navbar-right">[m
+             <li><a href="impressies.html">Impressies</a></li>[m
+             <li><a href="overons.html">Over Ons</a></li>[m
+[31m-            <!-- <li class="dropdown">[m
+[31m-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Overige <span class="caret"></span></a>[m
+[31m-              <ul class="dropdown-menu">[m
+[31m-                <li><a href="nieuws-lijst.html">Nieuws Lijst</a></li>[m
+[31m-                <li><a href="nieuws-detail.html">Nieuws Detail</a></li>[m
+[31m-                <li><a href="shop-lijst.html">Shop Lijst</a></li>[m
+[31m-                <li><a href="shop-detail.html">Shop Detail</a></li>[m
+[31m-              </ul>[m
+[31m-            </li> -->[m
+           </ul>[m
+         </div><!--/.nav-collapse -->[m
+       </div><!--/.container -->[m
+[36m@@ -1428,75 +1419,6 @@[m
+     </section><!--/.menu-list -->[m
+     <!-- Menu Visgerechten End -->[m
+ [m
+[31m-    <!-- Menu Detail Section Begin -->[m
+[31m-    <!-- <section class="menu-detail-drink no-padding" style="background: url(assets/images/banner3.jpg) center; background-size: cover; background-attachment: fixed;">        [m
+[31m-      <div class="overlay"></div>[m
+[31m-      <div class="container-fluid no-padding">[m
+[31m-        <div class="col-md-6 left-content">[m
+[31m-          <div class="round-shape"><i class="flaticon-ice51"></i></div>[m
+[31m-[m
+[31m-          <div class="menu-list wow animated fadeIn" data-wow-delay="0.2s">[m
+[31m-[m
+[31m-            <div class="list">[m
+[31m-              <div class="icon"></div>[m
+[31m-              <div class="name-price">[m
+[31m-                <div class="name"><h3>Fried Calamari</h3></div>[m
+[31m-                <div class="line"></div>[m
+[31m-                <div class="price">$6</div>[m
+[31m-              </div>[m
+[31m-              <div class="description"><p>Golden fried Squid with side marinara sauce</p></div>[m
+[31m-            </div>[m
+[31m-            [m
+[31m-            <div class="list">[m
+[31m-              <div class="icon"></div>[m
+[31m-              <div class="name-price">[m
+[31m-                <div class="name"><h3>Meat Balls</h3></div>[m
+[31m-                <div class="line"></div>[m
+[31m-                <div class="price">$4</div>[m
+[31m-              </div>[m
+[31m-              <div class="description"><p>Home Made Meat Balls with tomate sauce</p></div>[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <div class="list">[m
+[31m-              <div class="icon"><i class="flaticon-restaurant3"></i></div>[m
+[31m-              <div class="name-price">[m
+[31m-                <div class="name"><h3>Chicken Wings</h3></div>[m
+[31m-                <div class="line"></div>[m
+[31m-                <div class="price">$4</div>[m
+[31m-              </div>[m
+[31m-              <div class="description"><p>Non Breaded wings served with hot sauce</p></div>[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <div class="list">[m
+[31m-              <div class="icon"></div>[m
+[31m-              <div class="name-price">[m
+[31m-                <div class="name"><h3>Shrimp Marinara</h3></div>[m
+[31m-                <div class="line"></div>[m
+[31m-                <div class="price">$4</div>[m
+[31m-              </div>[m
+[31m-              <div class="description"><p>Fried Shrimp with marinara sauce.</p></div>[m
+[31m-            </div>[m
+[31m-            [m
+[31m-          </div>[m
+[31m-        </div>[m
+[31m-[m
+[31m-        <div class="col-md-6 right-content">  [m
+[31m-          <div class="title section-title wow animated fadeIn">[m
+[31m-            <h1>Sweet Dessert</h1>[m
+[31m-            <div class="section-subtext">[m
+[31m-              <div class="border-left"></div>[m
+[31m-              <h2>Taste the sweet sugar</h2>[m
+[31m-              <div class="border-right"></div>[m
+[31m-            </div>        [m
+[31m-            <div class="title-separator-container">[m
+[31m-              <div class="title-separator"></div>[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </div>[m
+[31m-      </div>[m
+[31m-    </section> -->[m
+[31m-    <!-- Menu Detail Section End -->[m
+[31m-[m
+     <!-- Menu: Varkensvlees Gerechten Start -->[m
+     <section class="menu-detail-main" id="first-content">[m
+       <div class="container">[m
+[36m@@ -2327,7 +2249,7 @@[m
+     </section>[m
+     <!-- Map Section End  -->[m
+ [m
+[31m-        <!-- Footer Section Begin  -->[m
+[32m+[m[32m    <!-- Footer Section Begin  -->[m
+     <section class="footer">[m
+       <div class="container">[m
+ [m
+[36m@@ -2405,14 +2327,6 @@[m
+           <div class="footer-content">[m
+             <div class="text"><p><i class="fa fa-location-arrow" aria-hidden="true"></i> Dorpstraat 44, Beekbergen</p></div>[m
+             <div class="text"><p><i class="fa fa-phone" aria-hidden="true"></i> (055) 506 18 18</p></div>[m
+[31m-            <!-- <div class="footer-form">[m
+[31m-              <form>[m
+[31m-                <input type="text" class="form-control" placeholder="Name">[m
+[31m-                <input type="text" class="form-control" placeholder="Email">[m
+[31m-                <textarea class="form-control" placeholder="Your Message"></textarea>[m
+[31m-              </form>[m
+[31m-              <div class="def-btn">Send Message</div>[m
+[31m-            </div> -->[m
+           </div>[m
+         </div><!--/.col-md-3 -->[m
+ [m

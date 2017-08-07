@@ -1,207 +1,367 @@
-$(document).ready(function() {
+var commonFunctions = {
 
-  'use strict';
+    // -------------- Preloader -------------- 
+    preloaderInit: function () {
 
-  // -------------- Preloader -------------- 
-  $('.preloader').addClass('animated fadeOut');
-  setTimeout(function(){
+      var $preLoader = $('.preloader');  
 
-    $('.preloader').addClass('loaded');
+      if ($preLoader.length) {
+        
+        $preLoader.addClass('animated fadeOut');
 
-  }, 1000);
+        setTimeout(function() {
 
-  // -------------- Scroll to content animation -------------- 
-  $(".scroll-to a[href^='#']").on('click', function(event) {
+          $preLoader.addClass('loaded');
 
-    event.preventDefault();
+        }, 1000);
 
-    $('html, body').animate({
+      }
 
-        scrollTop: $(this.hash).offset().top-70
+    },
 
-    }, 1000);
+    // -------------- Scroll to content animation -------------- 
+    scrollToContent: function() {
 
-  });
+      $(".scroll-to a[href^='#']").on('click', function(event) {
 
-  // -------------- Scroll to Anchor -------------- 
-  // Select all links with hashes
-  $('a[href*="#"]')
-
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-
-    // On-page links
-    if (
-
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-
-    ) {
-
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-      // Does a scroll target exist?
-      if (target.length) {
-
-        // Only prevent default if animation is actually gonna happen
         event.preventDefault();
 
         $('html, body').animate({
 
-          scrollTop: target.offset().top-120
+            scrollTop: $(this.hash).offset().top-70
 
-        }, 1000, function() {
+        }, 1000);
 
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
+      });
 
-          if ($target.is(":focus")) { // Checking if the target was focused
+    },
 
-            return false;
+    // -------------- Scroll to Anchor -------------- 
+    scrollToAnchor: function() {
 
-          } else {
+      // Select all links with hashes
+      $('a[href*="#"]')
 
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
 
-          };
+        // On-page links
+        if (
+
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+
+        ) {
+
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+          // Does a scroll target exist?
+          if (target.length) {
+
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+
+            $('html, body').animate({
+
+              scrollTop: target.offset().top-120
+
+            }, 1000, function() {
+
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+
+              if ($target.is(":focus")) { // Checking if the target was focused
+
+                return false;
+
+              } else {
+
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+
+              };
+
+            });
+
+          }
+
+        }
+
+      });
+
+    },
+
+    // -------------- Slick -------------- 
+    initSliders: function() {
+    
+      var $aboutCarousel = $('.about-carousel');
+      var $teamSlider = $('.team-slider');
+
+      if ($aboutCarousel.length) {
+
+        $aboutCarousel.slick({
+
+          centerMode: true,
+          centerPadding: '0px',
+          vertical: true,
+          verticalSwiping: true,
+          slidesToShow: 1,
+          prevArrow:'<div class="control center control-top"><div class="control-wrap"><button class="def-btn prev"><i class="fa fa-chevron-up"></i></button><img src="assets/images/btn-decoration-bottom.png" alt=""></div></div>',
+          nextArrow:'<div class="control center control-bottom"><div class="control-wrap"><img src="assets/images/btn-decoration-top.png" alt=""><button class="def-btn next"><i class="fa fa-chevron-down"></i></button></div></div>',
+
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                verticalSwiping: true,
+              }
+            }    
+          ]
 
         });
 
       }
 
-    }
+      if ($teamSlider.length) {
 
-  });
+        $teamSlider.slick({
 
-  // -------------- Slick -------------- 
-  var $aboutCarousel = $('.about-carousel');
-  var $teamSlider = $('.team-slider');
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
 
-  if ($aboutCarousel.length) {
+        });
 
-    $aboutCarousel.slick({
+      } 
 
-      centerMode: true,
-      centerPadding: '0px',
-      vertical: true,
-      verticalSwiping: true,
-      slidesToShow: 1,
-      prevArrow:'<div class="control center control-top"><div class="control-wrap"><button class="def-btn prev"><i class="fa fa-chevron-up"></i></button><img src="assets/images/btn-decoration-bottom.png" alt=""></div></div>',
-      nextArrow:'<div class="control center control-bottom"><div class="control-wrap"><img src="assets/images/btn-decoration-top.png" alt=""><button class="def-btn next"><i class="fa fa-chevron-down"></i></button></div></div>',
+    },
 
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '0px',
-            slidesToShow: 1,
-            adaptiveHeight: true,
-            verticalSwiping: true,
-          }
-        }    
-      ]
+    // -------------- On Scroll Navbar Effect -------------- 
+    onScrollNavbarEffect: function() {
 
-    });
+      var window_width = $(window).width();
+      var $navbar = $('.navbar');
 
-  }
+      $(window).on('scroll', function() {  
 
-  if ($teamSlider.length) {
+        'use strict'; 
 
-    $teamSlider.slick({
+        var scroll = $(window).scrollTop();
 
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+        if (scroll > 60) {
+
+          $navbar.addClass('scroll-fixed-navbar');
+
+        } else {
+
+          $navbar.removeClass('scroll-fixed-navbar');
+
         }
-      ]
 
-    });
+      });   
 
-  }
+    },
 
-  // -------------- On Scroll Navbar Effect -------------- 
-  var window_width = $(window).width();
+    // -------------- Image behaviour on Impressie page   -------------- 
+    showUp: function() {
 
-  $(window).on('scroll', function() {  
+      var $showUpImage = $('.showup-image').find('.bottom-shape-wrap');
 
-    'use strict'; 
+      $showUpImage.on('mouseenter',function() { 
 
-    var scroll = $(window).scrollTop();
+        $(this).toggleClass('show');
+        $('.enlarge-image').toggleClass('hide');
 
-    if(scroll > 60) {
+      });
 
-      $('.navbar').addClass('scroll-fixed-navbar');
+      $showUpImage.on('mouseleave', function() {
 
-    } else {
+        $(this).removeClass('show');
 
-      $('.navbar').removeClass('scroll-fixed-navbar');
+      });
 
-    }
+    },
 
-  });
+    // -------------- Team Hover --------------
+    teamOverview: function() {
+
+      var $team = $('.team');
+      
+      $team.on('mouseover', function() {
+
+        $(this).find('.overlay').addClass('animated fadeInDown');
+
+      });
+
+      $team.on('mouseleave', function() {
+
+        $(this).find('.overlay').removeClass('animated fadeInDown');
+
+      });
+
+    },
+
+    // -------------- jQuery Isotope Settings -------------- 
+    isoTope: function() {
+
+      var $container = $('.gallery-image-container');
+
+      if ($container.length) {
+
+        $container.isotope({
+
+          filter: '*',
+          animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+          }
+
+        });
+
+      }
+
+      $('.filter').find('a').on('click', function() {
+
+        var selector = $(this).attr('data-filter');
+        $('.filter .current').removeClass('current');
+        $(this).addClass('current');
+
+        $container.isotope({
+
+          filter: selector,
+          animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+          }
+
+         });
+
+         return false;
+
+      });
+
+    },
+
+    // -------------- Fancybox -------------- 
+    initFancyBox: function() {
+
+      var $fancybox = $('.fancybox');
+
+      if ($fancybox.length) {
+
+        $fancybox.fancybox({
+
+          helpers: {
+            overlay: {
+              locked: false
+            }
+          }
+
+        }); 
+
+      }
+
+    },
+
+    // -------------- Jquery Masonry --------------   
+    initMasonery: function() {
+
+      var $container = $('.masonry-container');
+
+      if ($container.length) {
+
+        $container.imagesLoaded( function() {
+
+          $container.masonry({
+            columnWidth: '.masonry',
+            itemSelector: '.masonry'
+          });
+
+        });
+
+      }
+
+    },
+
+    //  -------------- Sly.js (Vertical scrolling news ticker)  --------------
+    verticalScrollNewsSticker: function() {
+
+      var $frame  = $('#smart');
+      var $wrap   = $frame.parent();
+
+      if ($frame.length) {
+
+        // Call Sly on frame
+        $frame.sly({
+          itemNav: "basic",
+          smart: 1,
+          activateOn: "click",
+          mouseDragging: 1,
+          touchDragging: 1,
+          releaseSwing: 1,
+          startAt: 0,
+          scrollBy: 0,
+          activatePageOn: "click",
+          speed: 300,
+          elasticBounds: 1,
+          easing: 'easeOutExpo',
+          dragHandle: 1,
+          dynamicHandle: true,
+          clickBar: 1,
+          prev: $wrap.find(".prev"),
+          next: $wrap.find(".next")
+        });
+
+      }
+
+    } 
+
+};
 
 
-  $('.showup-image .bottom-shape-wrap').on('mouseenter',function() { 
+$(document).ready(function() {
 
-    $(this).toggleClass('show');
-    $('.enlarge-image').toggleClass('hide');
-
-  });
-
-  $('.showup-image .bottom-shape-wrap').on('mouseleave', function() {
-
-    $(this).removeClass('show');
-
-  });
-
-  // -------------- Team Hover --------------
-  var $team = $('.team');
-  
-  $team.on('mouseover', function() {
-
-    $(this).find('.overlay').addClass('animated fadeInDown');
-
-  });
-
-  $team.on('mouseleave', function() {
-
-    $(this).find('.overlay').removeClass('animated fadeInDown');
-
-  });
+  'use strict';
 
   // -------------- Jquery WOW (reveal content when scroll) -------------- 
   var wow = new WOW({
@@ -268,51 +428,6 @@ $(document).ready(function() {
 
   });
 
-  // -------------- Jquery Isotope Setting -------------- 
-  var $container = $('.gallery-image-container');
-
-  $container.isotope({
-
-    filter: '*',
-    animationOptions: {
-      duration: 750,
-      easing: 'linear',
-      queue: false
-    }
-
-  });
-
-  $('.filter a').on('click', function() {
-
-    var selector = $(this).attr('data-filter');
-    $('.filter .current').removeClass('current');
-    $(this).addClass('current');
-
-    $container.isotope({
-
-      filter: selector,
-      animationOptions: {
-        duration: 750,
-        easing: 'linear',
-        queue: false
-      }
-
-     });
-
-     return false;
-
-  });
-
-  $('.fancybox').fancybox({
-
-    helpers: {
-      overlay: {
-        locked: false
-      }
-    }
-
-  });
-
 
   // -------------- Form Control Hover -------------- 
   $('.form-control').focus(function() { 
@@ -330,50 +445,5 @@ $(document).ready(function() {
 
   });
 
-  // -------------- Jquery Masonry -------------- 
-  var $container = $('.masonry-container');
-
-  $container.imagesLoaded( function() {
-
-    $container.masonry({
-      columnWidth: '.masonry',
-      itemSelector: '.masonry'
-    });
-
-  });
-
 });
 
-
-$(window).load(function() {  
-
-  //  -------------- Sly.js (Vertical scrolling news ticker)  --------------
-  $(function () {
-
-    var frame  = $('#smart');
-    var wrap   = frame.parent();
-
-    // Call Sly on frame
-    frame.sly({
-      itemNav: "basic",
-      smart: 1,
-      activateOn: "click",
-      mouseDragging: 1,
-      touchDragging: 1,
-      releaseSwing: 1,
-      startAt: 0,
-      scrollBy: 0,
-      activatePageOn: "click",
-      speed: 300,
-      elasticBounds: 1,
-      easing: 'easeOutExpo',
-      dragHandle: 1,
-      dynamicHandle: true,
-      clickBar: 1,
-      prev: wrap.find(".prev"),
-      next: wrap.find(".next")
-    });
-
-  }());
-
-});
