@@ -1,5 +1,5 @@
 // get the element to animate
-var $element = $('#map-canvas');
+var $element = $('.map-canvas');
 
 // create global map variables
 var map;
