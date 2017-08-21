@@ -1187,9 +1187,10 @@ input:focus {
 }
 .navbar-inverse .logo .relative-logo img {
   margin-top: -25px;
-  width: 75px;
+  width: 62px;
   z-index: 1;
   position: relative;
+  margin-right: 12px;
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;
