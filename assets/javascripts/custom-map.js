@@ -38,7 +38,7 @@ function initMap() {
         '<div class="maps-info">'+
             '<h2 class="maps-info__title">Lin Wah</h2>'+
             '<div class="maps-info__content">'+
-                '<p><b>Dagalijks</b>, zijn wij open van </br>' +
+                '<p><b>Dagelijks</b>, zijn wij open van </br>' +
                 '12:00 tot 22:00 uur. </p>'+
                 '<p>Dorpstraat 44 in Beekbergen </p>'+
                 '<p>Tel: (055) 506 18 18 </p>'+
