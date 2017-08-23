@@ -83,6 +83,9 @@ function initMap() {
 
     });
 
+    // open infowindow by default 
+    infowindow.open(map, marker);
+
 }
 
 // create the google maps only if page contains the element
