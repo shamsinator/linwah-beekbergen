@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Linwah | Chinees Indisch restaurant in Beekbergen</title>
@@ -32,7 +31,7 @@
     <link href="assets/fonts/flaticon/flaticon.css" rel="stylesheet">
 
     <!-- Fancybox -->
-    <link href="assets/javascripts/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
 
     <!-- Slick -->
     <link href="assets/css/slick/slick.css" rel="stylesheet">
@@ -91,7 +90,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="logo">
         <div class="relative-logo">
-          <img src="assets/images/logo.png" alt="logo">
+          <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
         </div>
       </div>
       <div class="container">
@@ -579,92 +578,42 @@
     </section><!--/.shop-detail -->
     <!-- Shop Detail End -->
 
+    <!-- Map Section Begin  -->
+    <section class="map no-padding">
+      <div class="map-canvas" id="map-canvas"></div>
+    </section>
+    <!-- Map Section End  -->    
+
     <!-- Footer Section Begin  -->
     <section class="footer">
       <div class="container">
 
         <div class="col-md-3">
-          <div class="footer-title"><h3>About Us</h3></div>
+          <div class="footer-title"><h3>Restaurant Lin Wah</h3></div>
           <div class="footer-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis mi vel nunc posuere vestibulum. Sed vitae vehicula leo. Pellentesque tempus. </p></div>
-          <div class="footer-title second-title"><h3>Opening Hours</h3></div>
+          <div class="footer-title second-title"><h3>Openingstijden</h3></div>
           <div class="footer-content">
             <ul class="opening-hours">
-              <li><div class="day">Monday - Thursday</div><div class="time">9:00 - 23:00</div></li>
-              <li><div class="day">Friday</div><div class="time">9:00 - 1:00</div></li>
-              <li><div class="day">Saturday - Sunday</div><div class="time">9:00 - 00:00</div></li>
+              <li><div class="day">Maandag - Zondag</div><div class="time">12:00 - 22:00</div></li>
             </ul>
           </div>
         </div><!--/.col-md-3 -->
 
         <div class="col-md-3">
-          <div class="footer-title"><h3>Twitter Feed</h3></div>
+          <div class="footer-title"><h3>Pagina's</h3></div>
           <div class="footer-content">
-            <ul class="recent-post">
-              <li>
-                <div class="thumbnail"><img src="assets/images/footer-image1.jpg" alt="blog thumbnail"></div>
-                <div class="recent-post-content">
-                  <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-                  <div class="date">September, 7th 2014</div>
-                </div>
-              </li>
-            </ul>
-
-            <ul class="recent-post">
-              <li>
-                <div class="thumbnail"><img src="assets/images/footer-image2.jpg" alt="blog thumbnail"></div>
-                <div class="recent-post-content">
-                  <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-                  <div class="date">September, 7th 2014</div>
-                </div>
-              </li>
-            </ul>
-
-            <ul class="recent-post">
-              <li>
-                <div class="thumbnail"><img src="assets/images/footer-image3.jpg" alt="blog thumbnail"></div>
-                <div class="recent-post-content">
-                  <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-                  <div class="date">September, 7th 2014</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div><!--/.col-md-3 -->
-
-        <div class="col-md-3">
-          <div class="footer-title"><h3>Popular Tags</h3></div>
-          <div class="footer-content">
-            <a href="#" class="tag">Food</a>
-            <a href="#" class="tag">Delicious</a>
-            <a href="#" class="tag">Good</a>
-            <a href="#" class="tag">Meat</a>
-            <a href="#" class="tag">Sandwich</a>
-            <a href="#" class="tag">Burger</a>
-            <a href="#" class="tag">Fried Rice</a>
-            <a href="#" class="tag">Spagheti</a>
-            <a href="#" class="tag">Nodle</a>
-            <a href="#" class="tag">Vegetarian</a>
-            <a href="#" class="tag">Fruit</a>
-            <a href="#" class="tag">Rice</a>
-            <a href="#" class="tag">Steak</a>
-            <a href="#" class="tag">Chicken</a>
-            <a href="#" class="tag">Egg</a>
-            <a href="#" class="tag">Salad</a>
-            <a href="#" class="tag">Beverages</a>
+            <a href="index.html" class="tag">Home</a>
+            <a href="menu.html" class="tag">Menu</a>
+            <a href="impressies.html" class="tag">Impressies</a>
+            <a href="overons.html" class="tag">Over Ons</a>
           </div>
         </div>
 
         <div class="col-md-3">
-          <div class="footer-title"><h3>Contact Us</h3></div>
+          <div class="footer-title"><h3>Contact Gegevens</h3></div>
           <div class="footer-content">
-            <div class="footer-form">
-              <form>
-                <input type="text" class="form-control" placeholder="Name">
-                <input type="text" class="form-control" placeholder="Email">
-                <textarea class="form-control" placeholder="Your Message"></textarea>
-              </form>
-              <div class="def-btn">Send Message</div>
-            </div>
+            <div class="text"><p><i class="fa fa-location-arrow" aria-hidden="true"></i> Dorpstraat 44, Beekbergen</p></div>
+            <div class="text"><p><i class="fa fa-phone" aria-hidden="true"></i> (055) 506 18 18</p></div>
           </div>
         </div><!--/.col-md-3 -->
 
@@ -675,31 +624,41 @@
     <!-- Copyright Section Begin -->
     <section class="copyright">
       <div class="top-shape scroll-to"><a href="#banner"><div class="shape"><i class="fa fa-angle-up"></i></div></a></div>
-      <div class="container">
-        <div class="left-section col-md-6">Copyright Suave Digital &copy; 2015 </div>
-        <div class="right-section col-md-6">
-          <ul class="social">
-            <li><div class="icon"><i class="fa fa-facebook"></i></div></li>
-            <li><div class="icon"><i class="fa fa-twitter"></i></div></li>
-            <li><div class="icon"><i class="fa fa-google-plus"></i></div></li>
-          </ul>
-        </div>
+        <div class="container">
+          <div class="left-section col-md-6">Copyright linwah-beekbergen.nl &copy; 2017</div>
+          <div class="right-section col-md-6">
+            <ul class="social">
+              <li>
+                <div class="text">
+                  <span>Website door Mediatree.nl</span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <a href="https://www.facebook.com/pages/Lin-Wah/103309133110837" target="_blank" title="Zie ons Facebook reviews"><i class="fa fa-facebook"></i></a>
+                </div>
+              </li>
+            </ul>
+          </div>
       </div>
     </section><!--/.copyright -->
     <!-- Copyright Section End -->
 
-
     <!-- JavaScripts -->
     <script src="assets/javascripts/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe0ojPayk6oS_NDaeD5aF6mtBcjjg2clE"></script>
+    <script src="assets/javascripts/fontawesome-markers.min.js"></script>
     <script src="assets/javascripts/bootstrap.min.js"></script>
     <script src="assets/javascripts/easing.js"></script>
     <script src="assets/javascripts/sly.min.js"></script>
     <script src="assets/javascripts/wow.min.js"></script>
     <script src="assets/javascripts/masonry.pkgd.min.js"></script>
     <script src="assets/javascripts/imagesLoaded.js"></script>
-    <script src="assets/javascripts/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
     <script src="assets/javascripts/isotope.pkgd.min.js"></script>
     <script src="assets/javascripts/slick.min.js"></script>
+    <script src="assets/javascripts/custom-map.js"></script>
     <script src="assets/javascripts/custom.js"></script>
+    <script src="assets/javascripts/linwah-default.js"></script>    
   </body>
 </html>
