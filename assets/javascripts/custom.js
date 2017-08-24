@@ -358,7 +358,7 @@ var commonFunctions = {
 
 };
 
-
+// NOTE: code below should be refactored in near feature!
 $(document).ready(function() {
 
   'use strict';
