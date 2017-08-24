@@ -1055,6 +1055,16 @@ input:focus {
   color: #C43540;
 }
 
+.footer-content a:link,
+.footer-content a:visited,
+.footer-content a:active {
+  color: #ffffff;
+}
+
+.footer-content a:hover {
+  color: #C43540;
+}
+
 /*------------- Copyright -------------*/
 .copyright {
   background: #1F1E1E;
