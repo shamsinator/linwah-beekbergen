@@ -1061,8 +1061,15 @@ input:focus {
   color: #ffffff;
 }
 
-.footer-content a:hover {
+.footer-content a:hover,
+.maps-info a:hover {
   color: #C43540;
+}
+
+.maps-info a:link,
+.maps-info a:visited,
+.maps-info a:active {
+  color: #444;
 }
 
 /*------------- Copyright -------------*/

@@ -41,7 +41,7 @@ function initMap() {
                 '<p><b>Dagelijks</b>, zijn wij open van </br>' +
                 '12:00 tot 22:00 uur. </p>'+
                 '<p>Dorpstraat 44 in Beekbergen </p>'+
-                '<p>Tel: (055) 506 18 18 </p>'+
+                '<p><a class="zoro" href="tel:0555061818">Tel: (055) 506 18 18 </a></p>'+
             '</div>'+
         '</div>';
 
