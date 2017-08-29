@@ -1321,6 +1321,16 @@ input:focus {
   background: transparent;
   padding: 0px;
 }
+.banner.home {
+  background-size: contain!important;
+  background-repeat: no-repeat!important;
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 992px) {
+  .banner.home {
+  background-size: cover!important;
+  }
+}
 .banner.banner-small {
   height: 400px;
 }
