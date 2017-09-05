@@ -58,7 +58,7 @@ function initMap() {
 
         position: latLong,
         map: map,
-        title:"Win Lah",
+        title:"Lin Wah",
         animation: google.maps.Animation.DROP,
         position: {
             lat: 52.1590192, 
