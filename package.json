@@ -1,0 +1,25 @@
+{
+  "name": "linwah-beekbergen",
+  "version": "1.0.0",
+  "description": "LinWah website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamsinator/linwah-beekbergen.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Git",
+    "Gulp"
+  ],
+  "author": "Amir Shamsi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shamsinator/linwah-beekbergen/issues"
+  },
+  "homepage": "https://github.com/shamsinator/linwah-beekbergen#readme"
+}
